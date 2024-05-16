@@ -95,6 +95,8 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.16.3)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
@@ -280,6 +282,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   devise-bootstrap-views (~> 1.0)
+  font-awesome-rails
   iex-ruby-client
   jbuilder (~> 2.7)
   listen (~> 3.3)
