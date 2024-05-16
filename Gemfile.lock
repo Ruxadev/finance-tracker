@@ -86,6 +86,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     erubi (1.12.0)
     ffi (1.16.3)
     globalid (1.2.1)
@@ -185,6 +186,7 @@ GEM
       railties (>= 5.2)
     rexml (3.2.6)
     rubyzip (2.3.2)
+    rufo (0.17.1)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -259,12 +261,14 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  devise-bootstrap-views (~> 1.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7, >= 6.1.7.7)
+  rufo
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
