@@ -8,14 +8,13 @@ class Stock < ApplicationRecord
     client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_client[:sandbox_api_key],
                                   endpoint: 'https://cloud.iexapis.com/v1')
     begin
-      company_name = client.company(ticker_symbol).company_name
-      last_price = client.price(ticker_symbol)
-      puts "Company Name: #{company_name}, Last Price: #{last_price}" # Debug statement
-      new(ticker: ticker_symbol, name: company_name, last_price: last_price)
+      new(ticker: ticker_symbol, name: company_name(ticke_symbol).company_name, last_price: client.price(ticker_symbol))
     rescue => exception
-      puts "Error fetching stock information: #{exception.message}" # Debug statement
       return nil
     end
   end
 
+  def self.check_db(ticker_symbol)
+    where(ticker: ticker_symbol).first
+  end
 end
